@@ -6,12 +6,14 @@ public class panelBorderDas extends javax.swing.JPanel {
 
     public panelBorderDas() {
         initComponents();
-        setOpaque(false);
+        setOpaque(true);
     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+
+        setOpaque(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

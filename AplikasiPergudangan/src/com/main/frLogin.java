@@ -107,7 +107,7 @@ public class frLogin extends javax.swing.JFrame {
         
         if(user.equals(trueUser)&&pass.equals(truePass)){
             JOptionPane.showMessageDialog(null,"Password Benar!");
-            new FrameDasboard().setVisible(true);
+            new frMain().setVisible(true);
             this.dispose();
         }else{
             if (txtUsername.getText().equals("")&&txtPassword.getText().equals("")){
