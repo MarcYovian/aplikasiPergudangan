@@ -6,6 +6,7 @@ import java.awt.*;
 public class MenuItem extends javax.swing.JPanel {
 
     private boolean selected;
+    private boolean over;
     
     public MenuItem(model_Menu data) {
         initComponents();
@@ -24,6 +25,11 @@ public class MenuItem extends javax.swing.JPanel {
     
     public void setSelected(boolean selected) {
         this.selected = selected;
+        repaint();
+    }
+    
+    public void setOver(boolean over) {
+        this.over = over;
         repaint();
     }
 
@@ -56,10 +62,15 @@ public class MenuItem extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
     @Override
     protected void paintComponent(Graphics grphcs) {
-        if (selected) {
+        if (selected || over) {
             Graphics2D g2 = (Graphics2D) grphcs;
             g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-            g2.setColor(new Color(255, 255, 255, 80));
+            if(selected){
+                g2.setColor(new Color(255, 255, 255, 80));
+            }else{
+                g2.setColor(new Color(255, 255, 255, 20));
+
+            }
             g2.fillRoundRect(10, 0, getWidth() - 20, getHeight(), 5, 5);
         }
         super.paintComponent(grphcs);
