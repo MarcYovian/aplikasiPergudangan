@@ -47,12 +47,12 @@ public class MenuItem extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
                 .addComponent(lbIcon)
                 .addGap(18, 18, 18)
                 .addComponent(lbName)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -71,7 +71,7 @@ public class MenuItem extends javax.swing.JPanel {
                 g2.setColor(new Color(255, 255, 255, 20));
 
             }
-            g2.fillRoundRect(10, 0, getWidth() - 20, getHeight(), 5, 5);
+            g2.fillRoundRect(10, 0, getWidth()-20, getHeight(), 5, 5);
         }
         super.paintComponent(grphcs);
     }

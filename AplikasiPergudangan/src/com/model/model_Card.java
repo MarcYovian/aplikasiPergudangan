@@ -10,15 +10,15 @@ public class model_Card {
         this.title = title;
     }
 
-    public double getNum() {
+    public int getNum() {
         return num;
     }
 
-    public void setNum(double num) {
+    public void setNum (int num) {
         this.num = num;
     }
 
-    public model_Card(String title, double num) {
+    public model_Card(String title, int num) {
         this.title = title;
         this.num = num;
     }
@@ -27,5 +27,5 @@ public class model_Card {
     }
     
     private String title;
-    private double num;
+    private int num;
 }
