@@ -25,8 +25,8 @@ public class Menu extends javax.swing.JPanel {
     }
 
         private void init() {
-//        listMenu1.addItem(new model_Menu("home-white", "Dashboard", model_Menu.MenuType.MENU));
-//        listMenu1.addItem(new model_Menu("package", "Product List", model_Menu.MenuType.MENU));
+        listMenu1.addItem(new model_Menu("home-white", "Dashboard", model_Menu.MenuType.MENU));
+        listMenu1.addItem(new model_Menu("package", "Product List", model_Menu.MenuType.MENU));
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

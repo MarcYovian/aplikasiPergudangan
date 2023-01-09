@@ -24,14 +24,14 @@ public class Frame_Welcome extends javax.swing.JPanel {
         lbMenu = new javax.swing.JLabel();
         lbProfile = new com.component.NameProfile();
 
-        lbMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/icon/burger-bar.png"))); // NOI18N
+        lbMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/icon/menu-white.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(21, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lbProfile, javax.swing.GroupLayout.PREFERRED_SIZE, 439, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(lbMenu)

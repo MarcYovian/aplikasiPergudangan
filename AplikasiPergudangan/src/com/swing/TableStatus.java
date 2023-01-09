@@ -1,12 +1,6 @@
 package com.swing;
 
 import com.model.StatusType;
-import static com.model.StatusType.DISPATCHING;
-import static com.model.StatusType.PACKING;
-import static com.model.StatusType.PICKING;
-import static com.model.StatusType.RECEIVING_AND_PUTAWAY;
-import static com.model.StatusType.RETURNS;
-import static com.model.StatusType.SHIPPING;
 import java.awt.Color;
 import java.awt.GradientPaint;
 import java.awt.Graphics;

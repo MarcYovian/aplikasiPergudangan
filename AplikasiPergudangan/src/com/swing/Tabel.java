@@ -41,7 +41,7 @@ public class Tabel extends JTable {
                     return com;
                 } else {
                     StatusType type = (StatusType)value;
-                    CellStatus cell = new CellStatus(type);
+                    Status cell = new Status(type);
                     return cell;
                 }
             }

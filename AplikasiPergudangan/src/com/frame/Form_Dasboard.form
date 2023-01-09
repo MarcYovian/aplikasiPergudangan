@@ -67,7 +67,7 @@
           <Font name="SansSerif" size="18" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/com/icon/warehouse.png"/>
+          <Image iconType="3" name="/com/icon/home-black.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Dasboard"/>
       </Properties>
@@ -141,7 +141,7 @@
                   <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
-                  <Component id="spTable" pref="199" max="32767" attributes="0"/>
+                  <Component id="spTable" pref="191" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               </Group>
           </Group>
