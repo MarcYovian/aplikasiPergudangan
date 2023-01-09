@@ -3,9 +3,15 @@ package com.component;
 
 import com.event.EventMenuSelected;
 import com.model.model_Menu;
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+import java.awt.Color;
+import java.awt.GradientPaint;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionAdapter;
+import javax.swing.JFrame;
 
 public class Menu extends javax.swing.JPanel {
 
@@ -25,6 +31,7 @@ public class Menu extends javax.swing.JPanel {
     
     private void init() {
         listMenu1.addItem(new model_Menu("home", "Dashboard", model_Menu.MenuType.MENU));
+        listMenu1.addItem(new model_Menu("package", "Product List", model_Menu.MenuType.MENU));
     }
 
     @SuppressWarnings("unchecked")

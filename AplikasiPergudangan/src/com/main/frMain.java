@@ -2,30 +2,38 @@ package com.main;
 
 import com.event.EventMenuSelected;
 import com.frame.Form_Dasboard;
+import com.frame.Form_ProductList;
 import java.awt.Color;
 import javax.swing.JComponent;
 
 public class frMain extends javax.swing.JFrame {
 
     private Form_Dasboard dasboard;
+    private Form_ProductList productList;
     
     public frMain() {
         initComponents();
+        
+        menu1.initMoving(this);
 //        setExtendedState(JFrame.MAXIMIZED_BOTH);
         dasboard = new Form_Dasboard();
-        menu.addEventMenuSelected(new EventMenuSelected(){
+        productList = new Form_ProductList();
+        menu1.addEventMenuSelected(new EventMenuSelected() {
             @Override
-            public void selected(int index){
-                if(index == 0){
+            public void selected(int index) {
+                System.out.println(index);
+                if (index == 0) {
                     setForm(dasboard);
+                } else if (index == 1) {
+                    setForm(productList);
                 }
             }
         });
-        
+        //  set when system open start with home form
         setForm(new Form_Dasboard());
     }
-    
-    private void setForm(JComponent com){
+
+    private void setForm(JComponent com) {
         mainPanel.removeAll();
         mainPanel.add(com);
         mainPanel.repaint();
@@ -40,7 +48,7 @@ public class frMain extends javax.swing.JFrame {
         panelBorderDas1 = new com.swing.panelBorderDas();
         mainPanel = new javax.swing.JPanel();
         frame_Welcome1 = new com.frame.Frame_Welcome();
-        menu = new com.component.Menu();
+        menu1 = new com.component.Menu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,9 +63,10 @@ public class frMain extends javax.swing.JFrame {
         panelBorderDas1Layout.setHorizontalGroup(
             panelBorderDas1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBorderDas1Layout.createSequentialGroup()
-                .addComponent(menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(menu1, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(panelBorderDas1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(frame_Welcome1, javax.swing.GroupLayout.DEFAULT_SIZE, 828, Short.MAX_VALUE)
+                    .addComponent(frame_Welcome1, javax.swing.GroupLayout.DEFAULT_SIZE, 804, Short.MAX_VALUE)
                     .addGroup(panelBorderDas1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -70,7 +79,7 @@ public class frMain extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 503, Short.MAX_VALUE)
                 .addContainerGap())
-            .addComponent(menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(menu1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -125,7 +134,7 @@ public class frMain extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.frame.Frame_Welcome frame_Welcome1;
     private javax.swing.JPanel mainPanel;
-    private com.component.Menu menu;
+    private com.component.Menu menu1;
     private com.swing.panelBorderDas panelBorderDas1;
     // End of variables declaration//GEN-END:variables
 }
