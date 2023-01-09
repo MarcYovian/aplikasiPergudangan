@@ -1,3 +1,4 @@
+
 package com.component;
 
 import com.event.EventMenuSelected;
@@ -7,9 +8,13 @@ import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionAdapter;
+import javax.swing.JFrame;
 
-public class Menu extends javax.swing.JPanel {
-    
+public class Menu1 extends javax.swing.JPanel {
+
     private EventMenuSelected event;
     
     public void addEventMenuSelected(EventMenuSelected event) {
@@ -17,17 +22,18 @@ public class Menu extends javax.swing.JPanel {
         listMenu1.addEventMenuSelected(event);
     }
     
-    public Menu() {
+    public Menu1() {
         initComponents();
         setOpaque(false);
         listMenu1.setOpaque(false);
         init();
     }
-
-        private void init() {
-//        listMenu1.addItem(new model_Menu("home-white", "Dashboard", model_Menu.MenuType.MENU));
-//        listMenu1.addItem(new model_Menu("package", "Product List", model_Menu.MenuType.MENU));
+    
+    private void init() {
+        listMenu1.addItem(new model_Menu("home", "Dashboard", model_Menu.MenuType.MENU));
+        listMenu1.addItem(new model_Menu("package", "Product List", model_Menu.MenuType.MENU));
     }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -40,20 +46,20 @@ public class Menu extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/icon/warehouse-white.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/icon/warehouse.png"))); // NOI18N
         jLabel1.setText("Warehouse Application");
 
         javax.swing.GroupLayout panelMovingLayout = new javax.swing.GroupLayout(panelMoving);
         panelMoving.setLayout(panelMovingLayout);
         panelMovingLayout.setHorizontalGroup(
             panelMovingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 248, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
         );
         panelMovingLayout.setVerticalGroup(
             panelMovingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMovingLayout.createSequentialGroup()
                 .addContainerGap(15, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -70,8 +76,8 @@ public class Menu extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(panelMoving, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15)
-                .addComponent(listMenu1, javax.swing.GroupLayout.DEFAULT_SIZE, 417, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(listMenu1, javax.swing.GroupLayout.DEFAULT_SIZE, 426, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
     @Override
@@ -84,6 +90,36 @@ public class Menu extends javax.swing.JPanel {
         g2.fillRect(getWidth()-20, 0, getWidth(), getHeight());
         super.paintChildren(g);
     }
+    private int x;
+    private int y;
+
+    public void initMoving(JFrame frame) {
+        panelMoving.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent me) {
+                x = me.getX();
+                y = me.getY();
+            }
+
+        });
+        panelMoving.addMouseMotionListener(new MouseMotionAdapter() {
+            @Override
+            public void mouseDragged(MouseEvent me) {
+                frame.setLocation(me.getXOnScreen() - x, me.getYOnScreen() - y);
+            }
+        });
+    }
+    
+    
+    
+//    public void initMoving(JFrame frame){
+//        panelMoving.addMouseListener(new MouseAdapter(){
+//            @Override
+//            public void mousePressed(MouseEvent me){
+//                super.mousePressed(me);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

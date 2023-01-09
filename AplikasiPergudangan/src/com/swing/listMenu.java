@@ -5,6 +5,7 @@ import com.model.model_Menu;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+
 public class listMenu<E extends Object> extends JList<E> {
     private final DefaultListModel model;
     private int selectedIndex = -1;
@@ -28,6 +29,9 @@ public class listMenu<E extends Object> extends JList<E> {
                         model_Menu menu = (model_Menu) o;
                         if (menu.getType() == model_Menu.MenuType.MENU) {
                             selectedIndex = index;
+                            if (event != null) {
+                                event.selected(index);
+                            }
                         }
                     } else {
                         selectedIndex = index;
