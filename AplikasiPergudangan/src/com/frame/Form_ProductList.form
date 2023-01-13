@@ -25,7 +25,7 @@
               <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="searching2" min="-2" pref="666" max="-2" attributes="0"/>
+                      <Component id="search" min="-2" pref="666" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
@@ -45,7 +45,7 @@
               <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="searching2" min="-2" max="-2" attributes="0"/>
+              <Component id="search" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
               <Component id="jScrollPane1" pref="392" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
@@ -86,7 +86,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="com.component.Searching" name="searching2">
+    <Component class="com.component.Searching" name="search">
       <Properties>
         <Property name="opaque" type="boolean" value="false"/>
       </Properties>

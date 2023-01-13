@@ -4,6 +4,9 @@
  */
 package com.component;
 
+import com.frame.insertProduct;
+import java.awt.Color;
+
 /**
  *
  * @author DEWATA
@@ -31,16 +34,27 @@ public class Searching extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(227, 227, 227));
 
+        search1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                search1ActionPerformed(evt);
+            }
+        });
+
         btnInsert.setText("Insert Product");
+        btnInsert.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInsertActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(34, 34, 34)
                 .addComponent(search1, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 142, Short.MAX_VALUE)
                 .addComponent(btnInsert, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18))
         );
@@ -53,7 +67,21 @@ public class Searching extends javax.swing.JPanel {
                     .addComponent(btnInsert, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(9, Short.MAX_VALUE))
         );
+
+        btnInsert.setBackground(new Color(255,153,102));
+        btnInsert.setForeground(new Color(250, 250, 250));
+        btnInsert.setText("Insert");
+        btnInsert.setFont(new java.awt.Font("Poppins", 0, 13));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void search1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_search1ActionPerformed
+       
+    }//GEN-LAST:event_search1ActionPerformed
+
+    private void btnInsertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertActionPerformed
+       new insertProduct().setVisible(true);
+       
+    }//GEN-LAST:event_btnInsertActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
